@@ -19,10 +19,11 @@ class RandomTextPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+
             // reactive approach
             GetX<TextController>(
               builder: (controller) => Text(
-                "${controller.randomText}",
+                "${controller.randomText.value}",
                 style: Theme.of(context).textTheme.headlineLarge,
               ),
             ),

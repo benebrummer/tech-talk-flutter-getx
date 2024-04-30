@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:tech_talk_flutter_get/controller/simple_counter_controller.dart';
 
 import '../controller/reactive_counter_controller.dart';
 import '../drawer/drawer.dart';
 
-class CounterPage extends StatelessWidget {
-  const CounterPage({super.key});
+class ReactiveCounterPage extends StatelessWidget {
+  const ReactiveCounterPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -58,34 +57,6 @@ class CounterPage extends StatelessWidget {
               heroTag: 'incrementR',
               tooltip: 'Increment',
               child: const Icon(Icons.add),
-            ),
-            const SizedBox(height: 40),
-
-            // Simple approach
-            Text(
-              'Simple Counter:',
-              style: Theme.of(context).textTheme.headlineLarge,
-            ),
-
-            GetBuilder<SimpleCounterController>(
-              // init the controller only the first time
-              init: SimpleCounterController(),
-              builder: (controller) => Text(
-                "${controller.counter}",
-                style: Theme.of(context).textTheme.headlineLarge,
-              ),
-            ),
-
-            const SizedBox(height: 20),
-            GetBuilder<SimpleCounterController>(
-              // no need to initialize the controller again
-              builder: (controller) => FloatingActionButton(
-                // heroTag: 'incrementS',
-                onPressed: () => controller.increment(),
-                heroTag: "incrementS",
-                tooltip: 'Increment',
-                child: const Icon(Icons.add),
-              ),
             ),
           ],
         ),
