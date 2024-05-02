@@ -29,7 +29,7 @@ class ReactiveCounterPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: const Text("Counter"),
+        title: const Text("Reactive Counter"),
       ),
       drawer: getDrawer(context),
       body: Center(

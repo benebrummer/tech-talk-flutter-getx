@@ -18,20 +18,20 @@ Widget getDrawer(BuildContext context) {
           title: const Text('Reactive Counter'),
           onTap: () {
             // Without named route
-            Get.to(const ReactiveCounterPage());
+            Get.to(() => const ReactiveCounterPage());
           },
         ),
         ListTile(
           title: const Text('Text Generator'),
           onTap: () {
             // With named route
-            Get.to(RandomTextPage());
+            Get.to(() => RandomTextPage());
           },
         ),
         ListTile(
           title: const Text('Simple Counter'),
           onTap: () {
-            Get.to(const SimpleCounterPage());
+            Get.to(() => const SimpleCounterPage());
           },
         )
       ],
